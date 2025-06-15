@@ -1,0 +1,54 @@
+.sidebar-item {
+    list-style: none;
+    position: relative;
+}
+
+.sidebar-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.sidebar-link:hover {
+    background-color: #f8f9fa;
+}
+
+.submenu {
+    list-style: none;
+    padding-left: 20px;
+    display: none;
+}
+
+.submenu li a {
+    display: block;
+    padding: 8px 15px;
+    text-decoration: none;
+    color: #666;
+    transition: 0.3s;
+}
+
+.submenu li a:hover {
+    background-color: #e9ecef;
+    color: #000;
+}
+
+/* Show submenu when active */
+.sidebar-item.active .submenu {
+    display: block;
+}
+
+/* Active link styling */
+.sidebar-item.active > .sidebar-link {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.sidebar-item.active .fa-chevron-down {
+    transform: rotate(180deg);
+}
